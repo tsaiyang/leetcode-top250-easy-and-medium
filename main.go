@@ -14,5 +14,22 @@ func main() {
     //b9 := []byte{' ', ' ', ' ', ' ', '8', ' ', ' ', '7', '9'}
     //board := [][]byte{b1, b2, b3, b4, b5, b6, b7, b8, b9}
     //fmt.Println(isValidSudoku(board))
-    fmt.Println(combinationSum2([]int{2,5,2,1,2}, 5))
+    //fmt.Println(generateMatrix(4))
+    head := generateList()
+    head = rotateRight(head, 1)
+    printList(head)
+}
+
+func generateList() *ListNode {
+    l1 := &ListNode{Val: 1}
+    l2 := &ListNode{Val: 2}
+    l1.Next = l2
+    return l1
+}
+
+func printList(head *ListNode) {
+    for head != nil {
+        fmt.Println(head.Val)
+        head = head.Next
+    }
 }
