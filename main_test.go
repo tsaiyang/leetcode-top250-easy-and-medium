@@ -33,8 +33,11 @@ func TestAddString(t *testing.T) {
     }
 }
 
-func TestRotateList(t *testing.T) {
-
+func TestFindMin(t *testing.T) {
+    arr := []int{-10, -3, 0, 5, 9}
+    got := findMin(arr, 0, len(arr)-1)
+    want := 2
+    if got != want {
+        t.Errorf("got '%d',want '%d'", got, want)
+    }
 }
-
-
