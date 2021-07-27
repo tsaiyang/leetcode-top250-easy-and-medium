@@ -1,6 +1,6 @@
 package main
 
-func getRow1(rowIndex int) []int {
+func getRow(rowIndex int) []int {
     if rowIndex < 1 {
         return []int{1}
     }
@@ -8,7 +8,7 @@ func getRow1(rowIndex int) []int {
         return []int{1, 1}
     }
     result := [][]int{{1}, {1, 1}}
-    for i := 2; i < rowIndex; i++ {
+    for i := 2; i < rowIndex + 1; i++ {
         arr := make([]int, i+1)
         for j := 0; j < i+1; j++ {
             if j == 0 || j == i {

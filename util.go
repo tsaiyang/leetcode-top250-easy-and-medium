@@ -18,6 +18,11 @@ type Node struct {
     Next  *Node
 }
 
+type GraphNode struct {
+    Val       int
+    Neighbors []*GraphNode
+}
+
 func max(a, b int) int {
     if a > b {
         return a
